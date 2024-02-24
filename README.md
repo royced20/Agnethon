@@ -1,0 +1,2 @@
+# Agnethon
+Hackathon Agnethon
