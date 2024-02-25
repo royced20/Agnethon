@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LMS-Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/121832da78.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="res/styles-mobile.css" />
+  </head>
+  <body>
+   
+
+      <div class="profile-user">
+        <p id="user-name" class="lable">Royce Dmello</p>
+        <div class="profile-image-div">
+          <img src="dp2.png" class="profile-image" alt="user" />
+        </div>
+        <a href="#dropdown" class="dropdown-arrow"
+          ><i class="fa fa-chevron-down"></i
+        ></a>
+      </div>
+    </div>
+    <div id="page_container">
+      <div id="left-section" class="left-section item">
+        <div id = "side-bar" class="side_bar item">
+          <div class="side-bar-items">
+            <a href="#active" class="sidebar-item-icon"
+              ><i class="fa fa-home"></i
+            ></a>
+            <p class="normal-bold sidebar-item-lable">Home</p>
+          </div>
+          <div class="side-bar-items">
+            <a href="chat.html" class="sidebar-item-icon"
+              ><i class="fa fa-tachometer-alt"></i
+            ></a>
+            <p class="normal-bold sidebar-item-lable">Dashboard</p>
+          </div>
+          <div class="side-bar-items">
+            
+           
+           
+          </div>
+         
+          
+         
+          
+          <div class="side-bar-items">
+            <a href="#active" class="sidebar-item-icon"
+              ><i class="fa fa-cog"></i
+            ></a>
+            <p class="normal-bold sidebar-item-lable">LogOut</p>
+          </div>
+        </div>
+      </div>
+      <main id = "main-content">
+        <div class="title">Hi, Student!</div>
+        <div class="feature-section">
+          <div class="grid-item">
+              <div class="heading section-title">Zoom Meeting</div>
+              <button id="createZoomMeetingBtn" class="action-button">join Meeting</button>
+          </div>
+          <div class="grid-item">
+              <div class="heading section-title">Virtual Classroom</div>
+              <button id="createVirtualClassroomBtn" class="action-button">join Classroom</button>
+          </div>
+         
+      </div>
+        <div class="item auto-grid">
+          <div class="grid-item">
+            <div class="heading section-title">Created classrooms</div>
+            <div class="flex-content">
+              <div class="lesson">
+                <div class="time">
+                
+                </div>
+                <div class="info">
+                  <div class="normal-bold">SEPM</div>
+                  
+                </div>
+                <div class="class-icon">
+                  <img src="dp.png" class="profile-image" alt="user" />
+                </div>
+              </div>
+              <div class="lesson">
+                <div class="time">
+                 
+                </div>
+                <div class="info">
+                  <div class="normal-bold">DBMS</div>
+                  
+                </div>
+                <div class="class-icon">
+                  <img src="dp2.png" class="profile-image" alt="user" />
+                </div>
+              </div>
+              <div class="lesson">
+                <div class="time">
+                 
+                </div>
+                <div class="info">
+                  <div class="normal-bold">Cloud Computing</div>
+                  
+                </div>
+                <div class="class-icon">
+                  <img src="dp3.png" class="profile-image" alt="user" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- link to javascript -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" >
+      var sideNavButton = document.getElementsByClassName("side_nav_icons");
+var leftSection = document.getElementById("left-section");
+var menuHamburger = document.getElementById("ham");
+var main = document.getElementById("main-content");
+var sideBar = document.getElementById("side-bar");
+document.getElementById("createZoomMeetingBtn").addEventListener("click", createZoomMeeting);
+document.getElementById("createVirtualClassroomBtn").addEventListener("click", createVirtualClassroom);
+document.getElementById("checkAttendanceBtn").addEventListener("click", checkAttendance);
+
+function createZoomMeeting() {
+    // Add your logic to create a Zoom meeting here
+    alert("Creating Zoom Meeting...");
+}
+
+function createVirtualClassroom() {
+    // Add your logic to create a virtual classroom here
+    alert("Creating Virtual Classroom...");
+}
+
+function checkAttendance() {
+    // Add your logic to check attendance here
+    alert("Checking Attendance...");
+}
+for (let index = 0; index < sideNavButton.length; index++) {
+    const element = sideNavButton[index];
+    element.addEventListener('click',()=>{
+        var activeElement = document.getElementsByClassName("active");
+        activeElement[0].classList.remove("active");
+        element.classList.add("active");
+    });
+}
+
+
+menuHamburger.addEventListener("click", () => {
+    if (leftSection.style.display !== "block") {
+        leftSection.style.display = "block";
+        leftSection.style.zIndex = "2";
+        leftSection.style.position = "absolute";
+        leftSection.style.margin = "2rem";
+        leftSection.style.width = "100vw";
+        sideBar.style.width = "100%";
+        main.style.filter = "blur(8px)";
+        leftSection.classList.remove("item");
+
+      } else {
+        leftSection.style.position = "";
+        leftSection.style.display = "";
+        leftSection.classList.add("item");
+        main.style.filter = "";
+        leftSection.style.margin = "";
+      }
+  });
+    </script>
+    <script type="text/javascript" src="js/config.js"></script>
+  </body>
+</html>

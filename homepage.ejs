@@ -1,0 +1,103 @@
+
+
+<html>
+<head>
+    <style>
+        /* Define some css styles for the elements */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .card {
+            display: grid;
+            width:300px;
+            height:300px;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: 3fr;
+            gap:10px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .card-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .card-description {
+            font-size: 18px;
+            color: black;
+        }
+
+        .card-button {
+            width: 100px;
+            height: 40px;
+            background-color: #0099ff;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .emphasis{
+            color:black;
+            font-weight: bolder;
+            font-family:Sacramento;
+            font-size: xx-large;
+        }
+        #container{
+             background: -webkit-linear-gradient(left, #5c45b0, #FBC8D5);;
+        }
+        .body{
+            background-color: #333333;
+        }
+        
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="px-4 py-5 my-5 text-center" id="container">
+        <img class="d-block mx-auto mb-4" src="Wall paper image.jpg" alt="" width="300" height="250">
+        
+        <h1 class="display-5 fw-bold text-body-emphasis">Welcome to LearnerRank</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Learn from the best network of faculty and achevie you full potential.Platform that offers all in one <em class="emphasis">Learning Experience</em></p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-dark btn-lg px-4 gap-3"> <a href="login.ejs">Login</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4" ><a href="login.ejs">Experience</a></button>
+          </div>
+        </div>
+      </div>
+     
+</body>
+</html>

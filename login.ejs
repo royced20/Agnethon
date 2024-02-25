@@ -1,0 +1,104 @@
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up | Log In</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+       <div class="title-text">
+          <div class="title login">
+             Kindly Login!
+          </div>
+          <div class="title signup">
+             Create your account!
+          </div>
+       </div>
+       <div class="form-container">
+          <div class="slide-controls">
+             <input type="radio" name="slide" id="login" checked>
+             <input type="radio" name="slide" id="signup">
+             <label for="login" class="slide login">Login</label>
+             <label for="signup" class="slide signup">SignUp</label>
+             <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+             <form action="/login" class="login" method="POST">
+               <div class="field">
+                  <input type="text"name="name" placeholder="Your Name" required>
+              </div>
+                <div class="field">
+                   <input type="text" placeholder="Email Address" name="Email" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Password"  name="password"required>
+                </div>
+                <div class="pass-link">
+                   <a href="#">Reset password?</a>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">
+                   Don't Have Account? <a href="">Create A New</a>
+                </div>
+             </form>
+             <form action="/register" class="signup" method="POST">
+               <div class="field">
+                  <input type="text" placeholder="Your Name"  name="name"required >
+              </div>
+              <div class="field">
+                  <label for="ageGroup">Select your age group:</label>
+                  <select id="ageGroup" name="age" required>
+                      <option value="above18">Above 18</option>
+                      <option value="below18">Below 18</option>
+                  </select>
+              </div>
+              <div class="field">
+                  <label>Are you a teacher or student?</label>
+                  <input type="radio" id="teacher" name="role" value="teacher" required>
+                  <label for="teacher">Teacher</label>
+                  <input type="radio" id="student" name="role" value="student" required>
+                  <label for="student">Student</label>
+              </div>
+                <div class="field">
+                   <input type="text" placeholder="Email Address" name="Email" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="field">
+                   <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" value="SignUp">
+                </div>
+             </form>
+          </div>
+       </div>
+    </div>
+    <script >
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+signupBtn.onclick = (()=>{
+ loginForm.style.marginLeft = "-50%";
+ loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (()=>{
+ loginForm.style.marginLeft = "0%";
+ loginText.style.marginLeft = "0%";
+});
+signupLink.onclick = (()=>{
+ signupBtn.click();
+ return false;
+});
+    </script>
+  </body>
+
